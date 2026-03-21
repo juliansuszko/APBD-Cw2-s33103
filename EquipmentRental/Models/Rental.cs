@@ -36,4 +36,10 @@ public class Rental
     {
         return ReturnDate > EndDate;
     }
+
+    public override string ToString()
+    {
+        return
+            $"{nameof(Id)}: {Id}, {nameof(RentingUser)}: {RentingUser}, {nameof(RentedEquipment)}: {RentedEquipment}, {nameof(RentDate)}: {RentDate}, {nameof(EndDate)}: {EndDate}, {nameof(ReturnDate)}: {ReturnDate}";
+    }
 }
