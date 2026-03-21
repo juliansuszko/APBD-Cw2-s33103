@@ -59,4 +59,14 @@ public class RentalService
 
         return 0;
     }
+
+    public void MarkEquipmentAsBroken(Equipment equipment)
+    {
+        if (equipment.Status != EquipmentStatus.Rented)
+        {
+            throw new InvalidOperationException($"{equipment.Name} is rented.");
+        }
+        
+        equipment.Status = EquipmentStatus.Unavailable;
+    }
 }
