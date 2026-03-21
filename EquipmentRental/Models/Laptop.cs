@@ -14,4 +14,10 @@ public class Laptop : Equipment
         GraphicsCard = graphicsCard;
         Disks = disks;
     }
+
+    public override string ToString()
+    {
+        return
+            $"{nameof(RamSizeGB)}: {RamSizeGB}, {nameof(Processor)}: {Processor}, {nameof(GraphicsCard)}: {GraphicsCard}, {nameof(Disks)}: {string.Join(", ", Disks)}";
+    }
 }
