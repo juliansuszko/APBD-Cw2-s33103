@@ -2,10 +2,10 @@ namespace EquipmentRental.Models;
 
 public class Laptop : Equipment
 {
-    public int RamSizeGB { get; set; }
-    public string Processor { get; set; }
-    public string GraphicsCard { get; set; }
-    public string[] Disks { get; set; }
+    public int RamSizeGB { get; private set; }
+    public string Processor { get; private set; }
+    public string GraphicsCard { get; private set; }
+    public string[] Disks { get; private set; }
     
     public Laptop(string name, int ramSizeGb, string processor, string graphicsCard, string[] disks) : base(name)
     {
