@@ -18,4 +18,9 @@ public abstract class User
         Surname = surname;
         Type = type;
     }
+
+    public override string ToString()
+    {
+        return $"{nameof(Id)}: {Id}, {nameof(Name)}: {Name}, {nameof(Surname)}: {Surname}, {nameof(Type)}: {Type}";
+    }
 }
