@@ -25,4 +25,15 @@ public class Rental
 
         RentedEquipment.Status = EquipmentStatus.Rented;
     }
+
+    public void EndRental(DateTime returnDate)
+    {
+        ReturnDate = returnDate;
+        RentedEquipment.Status = EquipmentStatus.Available;
+    }
+
+    public bool IsReturnLate()
+    {
+        return ReturnDate > EndDate;
+    }
 }
