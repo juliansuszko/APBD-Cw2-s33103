@@ -14,4 +14,11 @@ public class Projector : Equipment
         VideoOutputs = videoOutputs;
         Matrix = matrix;
     }
+    
+    public override string ToString()
+    {
+        return $"{nameof(Resolution)}: {Resolution}, {nameof(Matrix)}: {Matrix}, " +
+               $"{nameof(VideoInputs)}: [{string.Join(", ", VideoInputs)}], " +
+               $"{nameof(VideoOutputs)}: [{string.Join(", ", VideoOutputs)}]";
+    }
 }
