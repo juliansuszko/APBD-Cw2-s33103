@@ -1,3 +1,4 @@
+using System;
 using System.Reflection.PortableExecutable;
 using EquipmentRental.Enums;
 using EquipmentRental.Models;
@@ -7,7 +8,7 @@ namespace EquipmentRental.Services;
 public class RentalService
 {
     private DataStore  _dataStore;
-    private int penalty = 5;
+    private int _penalty = 5;
     
     public RentalService(DataStore dataStore)
     {
@@ -54,7 +55,7 @@ public class RentalService
         if (rental.IsReturnLate())
         {
             int delay = (returnDate - rental.EndDate).Days;
-            return delay * penalty;
+            return delay * _penalty;
         }
 
         return 0;
