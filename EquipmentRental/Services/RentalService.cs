@@ -63,7 +63,7 @@ public class RentalService
 
     public void MarkEquipmentAsBroken(Equipment equipment)
     {
-        if (equipment.Status != EquipmentStatus.Rented)
+        if (equipment.Status == EquipmentStatus.Rented)
         {
             throw new InvalidOperationException($"{equipment.Name} is rented.");
         }
