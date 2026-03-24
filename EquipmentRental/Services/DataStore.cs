@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using EquipmentRental.Models;
 
 namespace EquipmentRental.Services;

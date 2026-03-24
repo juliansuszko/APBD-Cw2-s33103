@@ -1,3 +1,4 @@
+using System;
 using EquipmentRental.Enums;
 using EquipmentRental.Models;
 
