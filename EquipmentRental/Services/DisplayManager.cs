@@ -44,7 +44,7 @@ public class DisplayManager
         {
             if (rental.RentingUser == user && rental.ReturnDate == null)
             {
-                Console.WriteLine(rental);
+                Console.WriteLine(rental.RentedEquipment.Name);
             }
         }
     }

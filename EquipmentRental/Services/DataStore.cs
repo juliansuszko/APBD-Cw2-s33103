@@ -5,9 +5,9 @@ namespace EquipmentRental.Services;
 
 public class DataStore
 {
-    public List<Equipment> EquipmentList  { get; }
-    public List<User> Users { get; }
-    public List<Rental> Rentals { get; }
+    public List<Equipment> EquipmentList { get; } = new();
+    public List<User> Users { get; } = new();
+    public List<Rental> Rentals { get; } = new();
     
     public void AddEquipment(Equipment equipment)
     {
